@@ -81,6 +81,6 @@ This is my personal **Web Developer Portfolio Website** showcasing my skills, se
 ## Contact  
 
 If you have any inquiries or would like to collaborate, feel free to reach out via the **Contact Page** or email me at:  
-📧 **[your-email@example.com](elishaejimofor@gmail.com)**  
+📧 **(elishaejimofor@gmail.com)**  
 
 Let’s build something amazing together! 🚀
