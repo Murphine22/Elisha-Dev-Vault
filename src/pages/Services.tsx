@@ -1,12 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Palette, Megaphone, MessageSquare, PenTool, Share2, Briefcase, Users, BookOpen } from 'lucide-react';
+import { Code, Palette, Megaphone, MessageSquare, PenTool, Share2, Briefcase, Users, BookOpen, Server, Database, Shield } from 'lucide-react';
 
 const services = [
   {
-    title: 'Web Development',
-    description: 'Custom, responsive websites built with modern technologies like React and Tailwind CSS.',
+    title: 'Backend API Development',
+    description: 'Scalable REST APIs built with Node.js and Express.js, featuring JWT authentication, MongoDB databases, input validation, and production-ready error handling.',
+    icon: <Server size={48} />,
+    highlight: true,
+  },
+  {
+    title: 'Full-Stack Web Development',
+    description: 'Complete web applications with React frontends and Node.js/Express backends, connected to MongoDB or MySQL databases.',
     icon: <Code size={48} />,
+    highlight: true,
+  },
+  {
+    title: 'Database Design & Management',
+    description: 'Efficient MongoDB schema design with Mongoose ODM, data modeling, indexing, and query optimization for performant applications.',
+    icon: <Database size={48} />,
+    highlight: true,
+  },
+  {
+    title: 'Authentication & Security',
+    description: 'Secure authentication systems with JWT tokens, bcrypt password hashing, role-based access control, and API security best practices.',
+    icon: <Shield size={48} />,
   },
   {
     title: 'Graphic Design',
@@ -25,7 +43,7 @@ const services = [
   },
   {
     title: 'Digital Skills Tutor',
-    description: 'Personalized training in web development, digital marketing, and design for individuals and groups.',
+    description: 'Personalized training in full-stack web development, backend engineering, digital marketing, and design for individuals and groups.',
     icon: <BookOpen size={48} />,
   },
   {
@@ -59,9 +77,13 @@ const Services = () => {
       className="container mx-auto px-4 py-16"
     >
       <div className="text-center mb-16">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/20 rounded-full mb-4">
+          <Code size={16} className="text-indigo-600 dark:text-indigo-400" />
+          <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400">Full-Stack Services</span>
+        </div>
         <h1 className="text-4xl font-bold mb-4">My Services</h1>
         <p className="text-xl text-gray-600 dark:text-gray-300">
-          Comprehensive solutions for your digital needs
+          From backend APIs to beautiful frontends - comprehensive solutions for your digital needs
         </p>
       </div>
 
@@ -72,9 +94,25 @@ const Services = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+            whileHover={{ y: -8, scale: 1.02 }}
+            className={`relative bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border ${
+              'highlight' in service && service.highlight
+                ? 'border-emerald-200 dark:border-emerald-500/30'
+                : 'border-gray-100 dark:border-gray-700'
+            }`}
           >
-            <div className="text-indigo-600 dark:text-indigo-400 mb-6">
+            {'highlight' in service && service.highlight && (
+              <div className="absolute top-3 right-3">
+                <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-emerald-500 text-white">
+                  NEW
+                </span>
+              </div>
+            )}
+            <div className={`mb-6 ${
+              'highlight' in service && service.highlight
+                ? 'text-emerald-500 dark:text-emerald-400'
+                : 'text-indigo-600 dark:text-indigo-400'
+            }`}>
               {service.icon}
             </div>
             <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
@@ -82,7 +120,11 @@ const Services = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-6 px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors"
+              className={`mt-6 px-6 py-2 rounded-full transition-colors ${
+                'highlight' in service && service.highlight
+                  ? 'bg-emerald-500 text-white hover:bg-emerald-600'
+                  : 'bg-indigo-600 text-white hover:bg-indigo-700'
+              }`}
               onClick={() => window.location.href = '/contact'}
             >
               Learn More
