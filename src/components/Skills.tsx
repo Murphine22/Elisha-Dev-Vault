@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code, Server, Database, Megaphone, Shield, Terminal, GitBranch, Layers } from 'lucide-react';
 
@@ -137,6 +137,15 @@ const Skills: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const transitionRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (transitionRef.current) {
+        clearTimeout(transitionRef.current);
+        transitionRef.current = null;
+      }
+    };
+  }, []);
 
   const handleCategoryChange = (index: number) => {
     if (index === activeCategory) return;

@@ -14,6 +14,7 @@ const AIChatbot = () => {
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const replyTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -23,8 +24,17 @@ const AIChatbot = () => {
     scrollToBottom();
   }, [messages]);
 
+  useEffect(() => {
+    return () => {
+      if (replyTimeoutRef.current) {
+        clearTimeout(replyTimeoutRef.current);
+        replyTimeoutRef.current = null;
+      }
+    };
+  }, []);
+
   const handleSend = async () => {
-    if (!input.trim()) return;
+    if (!input.trim() || isTyping) return;
 
     const userMessage = input.trim();
     setMessages(prev => [...prev, { type: 'user', content: userMessage }]);
@@ -33,9 +43,13 @@ const AIChatbot = () => {
 
     const response = generateResponse(userMessage.toLowerCase());
     
-    setTimeout(() => {
+    if (replyTimeoutRef.current) {
+      clearTimeout(replyTimeoutRef.current);
+    }
+    replyTimeoutRef.current = setTimeout(() => {
       setMessages(prev => [...prev, { type: 'bot', content: response }]);
       setIsTyping(false);
+      replyTimeoutRef.current = null;
     }, 1000);
   };
 
@@ -251,7 +265,7 @@ His expertise spans:
 He's passionate about building innovative solutions and mentoring aspiring developers. Want to know about his services or projects?`;
     }
 
-    if (input.includes('hello') || input.includes('hi') || input.includes('hey') || input.includes('greet')) {
+    if (/\b(hello|hi|hey|greet)\b/.test(input)) {
       return `Hello! Welcome to Elisha's portfolio. I can help you with:
 - His backend & full-stack development skills
 - Projects he's built (APIs, web apps, etc.)
