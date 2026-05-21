@@ -8,7 +8,7 @@ const experiences = [
     id: 1,
     title: 'Backend Development Trainee',
     company: 'TS Academy (Phoenix Cohort)',
-    period: '2025',
+    period: 'Jan - May 2025',
     description: 'Completed intensive backend development training program covering modern server-side technologies, API design, database management, and deployment. Built production-ready applications using Node.js, Express.js, MongoDB, and TypeScript.',
     achievements: [
       { id: 1, text: 'Built RESTful APIs with Node.js and Express.js following MVC architecture patterns' },
