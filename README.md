@@ -1,86 +1,107 @@
-# README for Elisha Dev Portfolio Website
+# Elisha Dev Vault - Full-Stack Developer Portfolio
 
 ## Project Overview  
-This is my personal **Web Developer Portfolio Website** showcasing my skills, services, and experience. It is designed to highlight my expertise in web development, provide a seamless user experience, and offer tools for potential clients to connect with me. The website includes interactive features such as dark mode, an AI Assistant, and an Ads Setup page where users can contact me for advertisement services.
-
+This is my personal **Full-Stack Developer Portfolio Website** showcasing my skills, services, and experience. It is designed to highlight my expertise in both frontend and backend web development, provide a seamless user experience, and offer tools for potential clients to connect with me. The website includes interactive features such as dark mode, an AI Assistant, animated skill bars, a Backend Showcase section, and more.
 
 ## Features  
 
 ### 1. **Homepage**  
    - A clean, professional layout with an introduction and quick links to other sections.  
-   - Dark mode toggle for user convenience.  
+   - Dark mode toggle for user convenience.
+   - "Full-Stack Developer" badge highlighting backend expertise.
 
 ### 2. **About Me**  
    - A detailed section about my background, experience, and professional journey.  
-   - Highlights my decade-long expertise in web development, graphic design, content creation, and AI optimization.
+   - Highlights full-stack capabilities including backend engineering, database management, and authentication.
+   - TS Academy training journey documented.
 
-### 3. **Skills**  
+### 3. **Skills** (Interactive)  
+   - Tabbed skill categories with animated progress bars showing proficiency levels.
    - Showcasing technical proficiency in:  
-     - **Frontend**: HTML, CSS, JavaScript, Bootstrap, React.  
-     - **Backend**: PHP, MySQL.  
-     - **Other Tools**: WordPress, Canva, AI Optimization, and more.  
+     - **Frontend**: HTML5, CSS3/Tailwind, JavaScript (ES6+), React.js, TypeScript, Bootstrap.  
+     - **Backend**: Node.js, Express.js, TypeScript (Server), REST API Design, PHP, API Integration.
+     - **Database & Auth**: MongoDB, Mongoose ODM, MySQL, JWT Authentication, Database Design, Data Modeling.
+     - **DevOps & Tools**: Git & GitHub, Postman/API Testing, VS Code, Vercel Deployment, npm, WordPress.
+     - **Architecture**: MVC Pattern, CRUD Operations, Middleware Design, Error Handling, Input Validation, Security Best Practices.
+     - **Digital & Marketing**: SEO, Content Creation, Social Media Ads, AI Prompt Engineering, Graphic Design, UI/UX Design.
 
-### 4. **Services**  
-   - Web Development & Design.  
+### 4. **Backend Showcase**  
+   - Dedicated dark-themed section highlighting backend development expertise.
+   - Visual cards for RESTful API Development, Database Engineering, Authentication & Security, MVC Architecture, Middleware & Validation, and Version Control.
+   - TS Academy certification banner with technology badges.
+
+### 5. **Services**  
+   - Backend API Development (NEW)
+   - Full-Stack Web Development (NEW)
+   - Database Design & Management (NEW)
+   - Authentication & Security
    - Graphic Design & Branding.  
    - Content Creation & Digital Marketing.  
    - AI Optimization & Promotion.  
    - Advertisement Setup Services.  
 
-### 5. **Experience**  
-   - A timeline of my professional milestones, including key roles and accomplishments.  
-   - Testimonials from clients and colleagues.  
+### 6. **Experience**  
+   - A timeline of professional milestones, including TS Academy Backend Training as the latest entry.
+   - Key roles and accomplishments.  
 
-### 6. **Contact Page**  
+### 7. **Certifications**
+   - TS Academy Backend Development Program (highlighted).
+   - Frontend Web Development journey.
+   - Digital Marketing & AI expertise.
+
+### 8. **Projects**
+   - Student Record CRUD API (Backend)
+   - LMS Capstone Project (Backend)
+   - Daily Gist News Website
+   - Cosmos Explorer
+   - Eli-Pay Fintech App
+   - CampusLink App
+
+### 9. **Contact Page**  
    - A form to enable users to reach out for inquiries or collaborations.  
    - Integrated backend for form submission and validation.  
 
-### 7. **Dark Mode Modal**  
+### 10. **Dark Mode Modal**  
    - A switchable dark mode for better accessibility and user preference.  
 
-### 8. **AI Assistant**  
+### 11. **AI Assistant**  
    - An interactive AI assistant for quick navigation and FAQs.  
-   - Helps users find information or services effortlessly.  
-
-### 9. **Ads Setup Page**  
-   - Dedicated page for users to request advertisement setup services.  
-   - Includes a form and details about pricing and packages.  
-
 
 ## Technologies Used  
 
-- **Frontend**: HTML, CSS, JavaScript, React  
-- **Backend**: PHP, MySQL  
+- **Frontend**: React, TypeScript, Tailwind CSS, Framer Motion  
+- **Backend Skills**: Node.js, Express.js, MongoDB, Mongoose, JWT, REST APIs
 - **Design Tools**: Canva, Bootstrap 5  
-- **Interactivity**: JavaScript for dynamic elements, AI Assistant for user engagement  
-- **Dark Mode**: CSS and JavaScript for theme toggling  
-
+- **Build Tools**: Vite, PostCSS, ESLint
+- **Interactivity**: Framer Motion animations, interactive skill bars, AI Assistant  
+- **Dark Mode**: Tailwind CSS dark mode with theme toggling  
 
 ## Getting Started  
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/[your-username]/portfolio-website.git  
-   cd portfolio-website  
+   git clone https://github.com/Murphine22/Elisha-Dev-Vault.git  
+   cd Elisha-Dev-Vault  
    ```  
 
-2. Open `index.html` in your browser to view the website locally.  
+2. Install dependencies:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
-3. To set up the backend, configure your PHP server and connect to the database.  
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-
-
-## Future Updates  
-
-- Add a blog section to share insights and tutorials.  
-- Integrate API for real-time updates and interactive content.  
-- Expand the AI Assistant's functionality.  
-
-
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
 ## Contact  
 
 If you have any inquiries or would like to collaborate, feel free to reach out via the **Contact Page** or email me at:  
-📧 **(elishaejimofor@gmail.com)**  
+**(elishaejimofor@gmail.com)**  
 
-Let’s build something amazing together! 🚀
+Let's build something amazing together!

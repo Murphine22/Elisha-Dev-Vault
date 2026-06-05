@@ -6,6 +6,22 @@ import ExperienceCard from '../components/ExperienceCard';
 const experiences = [
   {
     id: 1,
+    title: 'Backend Development Trainee',
+    company: 'TS Academy (Phoenix Cohort)',
+    period: 'Jan - May 2025',
+    description: 'Completed intensive backend development training program covering modern server-side technologies, API design, database management, and deployment. Built production-ready applications using Node.js, Express.js, MongoDB, and TypeScript.',
+    achievements: [
+      { id: 1, text: 'Built RESTful APIs with Node.js and Express.js following MVC architecture patterns' },
+      { id: 2, text: 'Designed and implemented MongoDB databases with Mongoose ODM for data modeling and validation' },
+      { id: 3, text: 'Implemented JWT-based authentication and authorization with bcrypt password hashing' },
+      { id: 4, text: 'Developed a Student Record CRUD API as a hands-on project with full error handling and input validation' },
+      { id: 5, text: 'Completed LMS Capstone Project demonstrating end-to-end backend development skills' },
+      { id: 6, text: 'Collaborated with team members on the Capstone Project using Git workflow and code reviews' },
+    ],
+    location: 'Remote',
+  },
+  {
+    id: 2,
     title: 'Digital Specialist and Instructor',
     company: 'Murphine Technologies',
     period: 'April 2024 - Jan 2025',
@@ -14,13 +30,13 @@ const experiences = [
       { id: 1, text: 'Trained young developers in web development and design using HTML, CSS, JavaScript, and WordPress' },
       { id: 2, text: 'Developed practical modules on content creation, SEO optimization, and graphic design with Canva' },
       { id: 3, text: 'Introduced prompt engineering techniques to optimize AI tool utilization for creative problem-solving' },
-      { id: 4, text: 'Facilitated hands-on workshops that improved participants’ project-based learning outcomes by 80%' },
-      { id: 5, text: 'Mentored trainees to successfully execute real-world projects, enhancing their employability in the tech industry' }
+      { id: 4, text: 'Facilitated hands-on workshops that improved participants\u2019 project-based learning outcomes by 80%' },
+      { id: 5, text: 'Mentored trainees to successfully execute real-world projects, enhancing their employability in the tech industry' },
     ],
-    location: 'Abuja, Nigeria'
+    location: 'Abuja, Nigeria',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Web Developer',
     company: 'Periscope Consulting',
     period: 'Aug - Sept 2024',
@@ -28,12 +44,12 @@ const experiences = [
     achievements: [
       { id: 1, text: 'Developed responsive web applications using React and Tailwind CSS' },
       { id: 2, text: 'Integrated third-party APIs and services' },
-      { id: 3, text: 'Improved website performance by 40%' }
+      { id: 3, text: 'Improved website performance by 40%' },
     ],
-    location: 'Abuja, Nigeria'
+    location: 'Abuja, Nigeria',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Junior Front End Developer (Intern)',
     company: 'OS Concept Solutions',
     period: 'Jan 2024 - July 2024',
@@ -43,12 +59,12 @@ const experiences = [
       { id: 2, text: 'Created graphics and content for marketing and branding purposes' },
       { id: 3, text: 'Optimized website performance and improved SEO rankings' },
       { id: 4, text: 'Developed and refined AI prompts for content generation' },
-      { id: 5, text: 'Worked closely with a team to deliver projects on time' }
+      { id: 5, text: 'Worked closely with a team to deliver projects on time' },
     ],
-    location: 'Abuja, Nigeria'
+    location: 'Abuja, Nigeria',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Affiliate Marketer',
     company: "Timoyex Int'l",
     period: 'April 2019 - November 2024',
@@ -56,12 +72,12 @@ const experiences = [
     achievements: [
       { id: 1, text: 'Generated multiple new customer leads, resulting in significant growth for solar energy adoption' },
       { id: 2, text: 'Expanded the affiliate network by onboarding new high-performing partners' },
-      { id: 3, text: 'Designed and implemented targeted marketing funnels that improved conversion rates by 30%' }
+      { id: 3, text: 'Designed and implemented targeted marketing funnels that improved conversion rates by 30%' },
     ],
-    location: 'Remote'
+    location: 'Remote',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Business Developer (Branch Manager)',
     company: 'Forgo Battery Company Ltd',
     period: 'Feb 2017 - April 2022',
@@ -69,10 +85,10 @@ const experiences = [
     achievements: [
       { id: 1, text: 'Increased branch revenue by 35% in the first quarter' },
       { id: 2, text: 'Implemented new inventory management system' },
-      { id: 3, text: 'Developed and trained high-performing sales team' }
+      { id: 3, text: 'Developed and trained high-performing sales team' },
     ],
-    location: 'Ilorin, Nigeria'
-  }
+    location: 'Ilorin, Nigeria',
+  },
 ];
 
 const Experience = () => {
@@ -80,7 +96,7 @@ const Experience = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Helmet>
         <title>Experience - Elisha Ejimofor</title>
-        <meta name="description" content="Professional experience and career journey of Elisha Ejimofor" />
+        <meta name="description" content="Professional experience and career journey of Elisha Ejimofor - Full-Stack Developer trained at TS Academy" />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
@@ -91,7 +107,7 @@ const Experience = () => {
         >
           <h1 className="text-4xl font-bold mb-4">Professional Experience</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            My journey in technology and business development
+            My journey in technology, backend development, and business
           </p>
         </motion.div>
 
